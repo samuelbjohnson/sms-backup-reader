@@ -1,0 +1,36 @@
+@message-border: darkblue;
+@meta-color: darkblue;
+
+@meta-sent-color: lightblue;
+@meta-received-color: bisque;
+
+
+.message {
+	padding: 5px;
+	margin: 10px;
+	width: 400px;
+	
+	&.sent {
+		margin-left: 85px;
+	}
+}
+
+.message-meta {
+	&.sent {
+		background-color: @meta-sent-color;
+		text-align: right;
+	}
+	&.received {
+		background-color: @meta-received-color;
+}
+	color: @meta-color;
+}
+
+.message-body {
+	font-size: 1.25em;
+	margin: 2px;
+}
+
+.message-sender::after {
+	content: " - ";
+}
